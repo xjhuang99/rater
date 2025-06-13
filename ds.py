@@ -39,12 +39,11 @@ def rate_chat_with_deepseek(client, chat_content: str, prolific_id: str):
                 model=CONFIG["DEEPSEEK_MODEL"],
                 messages=[
                     {"role": "system", "content": """
-You are a feedback analysis expert. Your task is to analyze essay feedback and rate the feedback provider on three dimensions using a 1-7 scale (1 = Very Low, 4 = Moderate, 7 = Very High).
-
-1. Competence - How competent, confident, intelligent, capable, and skillful do they seem based on their comments?
-2. Warmth - How warm, friendly, good-natured, and tolerant do they appear in their tone and approach?
-3. Trustworthiness - How sincere, trustworthy, and honest do they seem in their evaluation?
-4. PROLIFIC_PID: The participant ID of this chat.
+Task: Analyze essay feedback and rate the feedback provider on three dimensions using a 1-7 scale (1 = Very Low, 4 = Moderate, 7 = Very High).
+Instructions: You will receive an essay and its corresponding feedback. Rate how the feedback provider appears based on:
+1. Competence - How competent, confident, intelligent, capable, and skillful do they seem in the feedback?
+2. Warmth - How warm, friendly, good-natured, and tolerant do they seem in the feedback?
+3. Trustworthiness - How sincere, trustworthy, and honest do they seem in the feedback?
 
 Return STRICTLY a JSON object with these EXACT field names.
 Do NOT include any other text, comments, or markdown formatting (no ```json or ```).
