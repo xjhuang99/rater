@@ -17,7 +17,7 @@ CONFIG = {
     "PROLIFIC_ID_COLUMN": "PROLIFIC_PID",
     "MAX_RETRIES": 3,
     "API_TIMEOUT": 60,
-    "OPENAI_MODEL": "gpt-4o-mini",  # Use GPT-4 model
+    "OPENAI_MODEL": "gpt-4.1",  # Use GPT-4 model
     "PARALLEL_WORKERS": 4,  
     "OUTPUT_BATCH_SIZE": 50  # batch size
 }
